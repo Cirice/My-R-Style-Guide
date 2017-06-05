@@ -3,12 +3,29 @@
 راهنمای نوشتن برنامه‌ها به زبان R
 =================================
 
+<div style="background-color:rgba(110, 200, 100, 0.1);
+	margin-top: 0px; margin-bottom: 0px;
+    margin-right: 0px; margin-left: 0px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    ">
+
 #### همکاری در این کار:
 
 - برای شروع به همکاری لطفا این مخزن را [فورک کنید](https://github.com/Cirice/My-R-Style-Guide); سپس یک انشعاب (Branch) درست کنید و شروع به کار کنید; سرانجام کارتان را به مخزن اعمال کنید و تغییراتتان را به گیت‌هاب push کنید، و [ یک درخواست Pull را ارسال کنید](https://help.github.com/articles/creating-a-pull-request).
 
 - درخواست‌تان را از طریق [Project Issue Tracker](https://github.com/Cirice/My-R-Style-Guide/issues) بیان کنید.
 
+<div style="background-color:rgba(110, 000, 200, 0.1);
+	margin-top: 0px; margin-bottom: 0px;
+    margin-right: 0px; margin-left: 0px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    ">
 
 ## معرفی:
 
