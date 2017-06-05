@@ -105,7 +105,7 @@ mean <- CalculateMean(data = c(1, 2, 3)) # this line is 97 characters long(with 
 <div dir="ltr">
 
 ```R
-clusters<-factor(c("New", "Passed", "VIP", "Churn"), levels = c("New", "Passed", "VIP", "Churn")) # i'm 123 characters long
+clusters<-factor(c("New", "Passed", "VIP", "Churn"), levels = c("New", "Passed", "VIP", "Churn")) # I'm 123 characters long
 ```
 
 <div dir="rtl">
@@ -126,7 +126,7 @@ clusters<-factor(c("New", "Passed", "VIP", "Churn"), levels = c("New", "Passed",
 
 ```R
 # Indent the statement inside if expression                          
-if ( a == b) {
+if (a == b) {
   x <- 1
 }
 
@@ -147,7 +147,24 @@ mean <- CalculateMean(data = c(1, 2, 3, 4, 5, 6, 7,
 								8, 9, 10))
 
 # Using Tab for indentation                       
-if ( a == b) {
+if (a == b) {
 	x <- 1
 }
 ```
+
+
+<div dir="rtl">
+
+## استفاده از فاصله(Spacing)
+
+1. سمت چپ و راست همگی عملگر دودویی(binary operators) یک حرف فاصله(Space character) بگذارید(عملگر‌های دودویی مثل +، -، /, =، -> و غیره).
+2. قبل از علامت , (comma) فاصله نگذارید.
+3. همیشه بعد از علامت , (comma) یک حرف فاصله بکذارید.
+4.  همیشه قبل از) (پرانتز باز) یک حرف فاصله بگذارید.
+5. بعد از ) (پرانتز باز) و قبل از ( (پرانتز بسته) حرف فاصله نگذارید.
+6.   بعد از ](beacket باز) و قبل از [ (bracket بسته) حرف فاصله نگذارید.
+
+### تبصره:
+1. در زمان مقدار دهی به آرگومان‌های یک تابع می‌توانید سمت چپ و راست عملگر = فاصله‌ای نگدارید.
+2. قبل از ) (پرانتز باز) در زمان فراخوانی یک تابع حرف فاصله نگدارید.
+3. به طور کلی برای بالاتر بردن خوانایی کدتان می‌توانید بیشتر از یک حرف فاصله استفاده کنید.
