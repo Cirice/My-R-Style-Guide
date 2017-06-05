@@ -18,7 +18,7 @@
 
 - درخواست‌تان را از طریق [Project Issue Tracker](https://github.com/Cirice/My-R-Style-Guide/issues) بیان کنید.
 
-<div style="background-color:rgba(110, 000, 200, 0.1);
+<div style="background-color:rgba(160, 250, 150, 0.9);
 	margin-top: 0px; margin-bottom: 0px;
     margin-right: 0px; margin-left: 0px;
     padding-top: 30px;
