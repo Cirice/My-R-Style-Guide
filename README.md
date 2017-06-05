@@ -32,7 +32,7 @@ find_max_in_list1.R
 
 <div dir="rtl">
 
-#### حالت نامطلب
+#### حالت نامطلوب
 
 <div dir="ltr">
 
@@ -70,7 +70,7 @@ ImportData
 
 <div dir="rtl">
 
-#### حالت نامطلب
+#### حالت نامطلوب
 
 <div dir="ltr">
 
@@ -106,7 +106,7 @@ mean <- CalculateMean(data = c(1, 2, 3)) # this line is 97 characters long(with 
 
 <div dir="rtl">
 
-#### حالت نامطلب
+#### حالت نامطلوب
 
 <div dir="ltr">
 
@@ -143,7 +143,7 @@ mean <- CalculateMean(data = c(1, 2, 3, 4, 5, 6, 7,
 
 <div dir="rtl">
 
-#### حالت نامطلب
+#### حالت نامطلوب
 
 <div dir="ltr">
 
@@ -203,7 +203,7 @@ x[1, ]
 
 <div dir="rtl">
 
-#### حالت نامطلب
+#### حالت نامطلوب
 
 <div dir="ltr">
 
