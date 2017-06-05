@@ -3,35 +3,17 @@
 راهنمای نوشتن برنامه‌ها به زبان R
 =================================
 
-<div style="background-color:rgba(110, 200, 100, 0.1);
-	margin-top: 0px; margin-bottom: 0px;
-    margin-right: 0px; margin-left: 0px;
-    padding-top: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
-    padding-left: 20px;
-    ">
-
 #### همکاری در این کار:
 
 - برای شروع به همکاری لطفا این مخزن را [فورک کنید](https://github.com/Cirice/My-R-Style-Guide); سپس یک انشعاب (Branch) درست کنید و شروع به کار کنید; سرانجام کارتان را به مخزن اعمال کنید و تغییراتتان را به گیت‌هاب push کنید، و [ یک درخواست Pull را ارسال کنید](https://help.github.com/articles/creating-a-pull-request).
 
 - درخواست‌تان را از طریق [Project Issue Tracker](https://github.com/Cirice/My-R-Style-Guide/issues) بیان کنید.
 
-<div style="background-color:rgba(160, 250, 150, 0.9);
-	margin-top: 0px; margin-bottom: 0px;
-    margin-right: 0px; margin-left: 0px;
-    padding-top: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
-    padding-left: 20px;
-    ">
-
 ## معرفی:
 
 R یک زبان برنامه نویسی سطح بالای تابعی است که در کار‌های مربوط به تحلیل آماری و ترسیم نمودار‌های داده ای بسیار پر طرفدار است. هدف این راهنما ساده کردن فرایند نوشتن، خواندن، توزیع کردن و بررسی کردن کد نوشته به این زبان است. این نوشته حاوی تعداد زیادی نکته و مطلب است که به نظر من می‌توانند به دستیابی به هدف ذکر شده کمک کنند.
 
-## قواعد ناگذاری
+## قواعد نامگذاری
 
 ### نامگذاری فایل‌ها:
 
@@ -192,3 +174,53 @@ if (a == b) {
 1. در زمان مقدار دهی به آرگومان‌های یک تابع می‌توانید سمت چپ و راست عملگر = فاصله‌ای نگدارید.
 2. قبل از ) (پرانتز باز) در زمان فراخوانی یک تابع حرف فاصله نگدارید.
 3. به طور کلی برای بالاتر بردن خوانایی کدتان می‌توانید بیشتر از یک حرف فاصله استفاده کنید.
+4. همیشه و در همه حال بعد از , (camma) یک حرف فاصله بگذارید.
+
+#### حالت مطلوب
+
+<div dir="ltr">
+
+```R
+# Correct use of spaces
+tab.prior <- table(df[df$days.from.opt < 0, "team.id"])
+total <- sum(x[, 1])
+total <- sum(x[1, ])
+
+# No space after '(' and before ')' and also one space right before '(' 
+if (debug)
+
+# Use of additional spaces for clarity
+plot(x    = x.coord,
+     y    = data.mat[, MakeColName(metric, ptiles[1], "roiOpt")],
+     ylim = ylim,
+     xlab = "dates",
+     ylab = metric,
+     main = (paste(metric, " for 4 samples ", sep = "")))
+
+# Always put one space after ','
+x[1, ]
+```
+
+<div dir="rtl">
+
+#### حالت نامطلب
+
+<div dir="ltr">
+
+```R
+# Incorrect spacing
+tab.prior <- table(df[df$days.from.opt<0, "team.id"])  # needs spaces around '<'
+tab.prior <- table(df[df$days.from.opt < 0,"team.id"])  # needs a space after the comma
+tab.prior<- table(df[df$days.from.opt < 0, "team.id"])  # needs a space before <-
+tab.prior<-table(df[df$days.from.opt < 0, "team.id"])  # needs spaces around <-
+total <- sum(x[,1])  # needs a space after the comma
+total <- sum(x[ ,1])  # needs a space after the comma, not before
+
+if ( debug )  # no spaces around debug
+
+x[1,]  # needs a space after the comma
+
+# No space before '('
+if(debug)
+
+```
