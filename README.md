@@ -517,7 +517,9 @@ CalculateSampleCovariance <- function(x, y, verbose = TRUE) {
 ```
 
 <div dir="rtl">
+
 ## مراجع
 
 <div dir="ltr">
+
 1. [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml)
