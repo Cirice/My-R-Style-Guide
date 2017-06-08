@@ -309,7 +309,7 @@ else
 
 <div dir="rtl">
 
-## مقدار دهی به متغیر‌ها(Assignment)
+## مقدار دهی به متغیر‌ها(Variable Assignments)
 
 1. همیشه از -> بجای = برای مقدار دهی استفاده کنید.
 
@@ -334,7 +334,7 @@ a = 3
 
 <div dir="rtl">
 
-## استفاده از Semicolon
+## استفاده از ;(Semicolon)
 
 1. هیچ وقت از علامت semicolon برای جدا کردن expression ها و یا statement های روی یک خط استفاده نکنید.
 2. از semicolon برای پایان دادن به خط استفاده نکنید.
@@ -367,3 +367,73 @@ x <- 5; x <- x/2
 ```R
 require(lda); require(ggplot);
 ```
+
+<div dir="rtl">
+## قواعد Comment گذاری
+
+1. به طور کلی comment را خط بالای کد خودتان و یا در ادامه کدتان روی همان خط می‌توانید اضافه کنید.
+2. comment را با # و یک حرف فاصله بلافاصله بعد آن(بعد حرف #) شروع کنید.
+3. comment های کوتاه را می‌توانید در ادامه کدتان روی همان خط بنویسید.
+4. هیچ وقت به کدی که کاری بدیهی انجام می‌دهد comment اضافه نکنید.
+2. comment ها را با تغییر کدتان در صورت لزوم به روز رسانی کنید.
+
+#### حالت مطلوب
+
+<div dir="ltr">
+
+```R
+# Create histogram of frequency of campaigns by pct budget spent.
+hist(df$pct.spent,
+     breaks = "scott",  # method for choosing number of buckets
+     main   = "Histogram: fraction budget spent by campaignid",
+     xlab   = "Fraction of budget spent",
+     ylab   = "Frequency (count of campaignids)")
+```
+
+```R
+require(lda)
+require(ggplot)
+```
+
+<div dir="rtl">
+
+#### حالت نامطلوب
+
+<div dir="ltr">
+
+```R
+# Setting x = 5
+x <- 5
+```
+
+```R
+#Calculating the residues
+residue <-CalculateAverageResidue(data) # I's a very very long and cumbersome comment; you better avoid writing very very long comments this way altogether! 
+```
+
+<div dir="rtl">
+## تابع تعریف گذاری
+
+1. در زمان تعریف یک تابع argument  هایی را که مقدار پیشفرض ندارند پیش از متغیر‌هایی که مقدار پیشفرض دارند بنویسید.
+2. هم در زمان تعریف و هم زمان فراخوانی یک تابع شما می‌توانید از line break استفاده کنید  لذا توجه داشته باشید که در این حالتline break بین assignment ها مجاز است.
+
+#### حالت مطلوب
+
+<div dir="ltr">
+
+```R
+PredictOutcome <- function(query, values, num.days,
+                           show.plot = TRUE)
+```
+
+<div dir="rtl">
+
+#### حالت نامطلوب
+
+<div dir="ltr">
+
+```R
+PredictOutcome <- function(query, values, num.days, show.plot =
+                           TRUE)
+```
+
