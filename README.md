@@ -13,6 +13,18 @@
 
 R یک زبان برنامه نویسی سطح بالای تابعی است که در کار‌های مربوط به تحلیل آماری و ترسیم نمودار‌های داده ای بسیار پر طرفدار است. هدف این راهنما ساده کردن فرایند نوشتن، خواندن، توزیع کردن و بررسی کردن کد نوشته به این زبان است. این نوشته حاوی تعداد زیادی نکته و مطلب است که به نظر من می‌توانند به دستیابی به هدف ذکر شده کمک کنند.
 
+## خلاصه قواعد مهم:
+
+1. از attach استفاده نکنید.
+2. از ; استفاده نکنید.
+3. بجای = از -> استفاهده کنید.
+4. همه‌ی comment ها را با # و یک حرف فاصله بعد آن شروع کنید.
+5. از Tab برای identation استفاده نکنید بجای Tab از Space(حرف فاصله) استفاده کنید.
+6. ترجیحا طول هر خط نباید بیشتر از 80 حرف باشد و این مقدار نباید به هیچ دلیلی بیشتر از 100 شود.
+7. در صورت استفاده از object system های مختلف R مثل S3 و S4 متود‌ها و توانایی‌های دو یا چند سیستم مختلف(مثلا Inheritance) را با هم مخلوط نکنید.
+
+### لطفا بقیه قواعد  را به دقت مطالعه کنید.
+
 ## قواعد نامگذاری
 
 ### نامگذاری فایل‌ها:
@@ -415,7 +427,7 @@ residue <-CalculateAverageResidue(data) # I's a very very long and cumbersome co
 
 ## تابع تعریف گذاری
 
-1. در زمان تعریف یک تابع argument  هایی را که مقدار پیشفرض ندارند پیش از متغیر‌هایی که مقدار پیشفرض دارند بنویسید.
+1. در زمان تعریف یک تابع argument هایی را که مقدار پیشفرض ندارند پیش از متغیر‌هایی که مقدار پیشفرض دارند بنویسید.
 2. هم در زمان تعریف و هم زمان فراخوانی یک تابع شما می‌توانید از line break استفاده کنید  لذا توجه داشته باشید که در این حالتline break بین assignment ها مجاز است.
 
 #### حالت مطلوب
@@ -437,4 +449,72 @@ PredictOutcome <- function(query, values, num.days,
 PredictOutcome <- function(query, values, num.days, show.plot =
                            TRUE)
 ```
+
+<div dir="rtl">
+
+## اضافه کردن مستند تابع(Function Documentation)
+
+1. هر تابعی که می‌نویسید باید بلافاصله پس از قسمت تعریف نام وآرگومان‌های تابع دارای یک بخش مستند تابع باشد.
+2. بخش مستند تابع به فرم comment نوشته می‌شود و به ترتیب حاوی  ۱) یک جمله توضیحی که تابع شما چه کاری انجام می‌دهد ۲) یک قیمت به نام Args که توضیحاتی درباره متغیر ورودی و نوع آن می‌دهد ۳) یک بخش Return گه در باره‌ی return value تابع شما توضیح می‌دهد.
+3. در صورتی که تابع شما یک routine یا procedure است در قسمت Return درباره‌ی side-effect های اجرای تابعتان توضیح دهید.
+4. هدف نوشتن و اضافه کردن function doc  این است که دیگران و خودتان(بعد از کذشت زمان) بتوانید بدون خواند source code تابع بفهمید که یک تابع نوشته شده به چه صورت عمل می‌کند و برای اجرای درست آن به چه آرگومان‌هایی نیاز است و همین طور خروجی و یا side-effect ای اجرای تابع چه هستند.
+
+#### حالت مطلوب
+
+<div dir="ltr">
+
+```R
+CalculateSampleCovariance <- function(x, y, verbose = TRUE) {
+  # Computes the sample covariance between two vectors.
+  #
+  # Args:
+  #   x: One of two vectors whose sample covariance is to be calculated.
+  #   y: The other vector. x and y must have the same length, greater than one,
+  #      with no missing values.
+  #   verbose: If TRUE, prints sample covariance; if not, not. Default is TRUE.
+  #
+  # Returns:
+  #   The sample covariance between x and y.
+  
+  n <- length(x)
+  # Error handling
+  if (n <= 1 || n != length(y)) {
+    stop("Arguments x and y have different lengths: ",
+         length(x), " and ", length(y), ".")
+  }
+  if (TRUE %in% is.na(x) || TRUE %in% is.na(y)) {
+    stop(" Arguments x and y must not have missing values.")
+  }
+  covariance <- var(x, y)
+  if (verbose)
+    cat("Covariance = ", round(covariance, 4), ".\n", sep = "")
+  return(covariance)
+}
+```
+
+<div dir="rtl">
+
+#### حالت نامطلوب
+
+<div dir="ltr">
+
+```R
+CalculateSampleCovariance <- function(x, y, verbose = TRUE) {  
+  n <- length(x)
+  # Error handling
+  if (n <= 1 || n != length(y)) {
+    stop("Arguments x and y have different lengths: ",
+         length(x), " and ", length(y), ".")
+  }
+  if (TRUE %in% is.na(x) || TRUE %in% is.na(y)) {
+    stop(" Arguments x and y must not have missing values.")
+  }
+  covariance <- var(x, y)
+  if (verbose)
+    cat("Covariance = ", round(covariance, 4), ".\n", sep = "")
+  return(covariance)
+}
+```
+
+
 
