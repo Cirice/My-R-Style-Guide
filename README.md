@@ -135,7 +135,9 @@ clusters<-factor(c("New", "Passed", "VIP", "Churn"), levels = c("New", "Passed",
 if (a == b) {
   x <- 1
 }
+```
 
+```R
 # Line break indentation
 mean <- CalculateMean(data = c(1, 2, 3, 4, 5, 6, 7,
                                8, 9, 10))
@@ -152,6 +154,9 @@ mean <- CalculateMean(data = c(1, 2, 3, 4, 5, 6, 7,
 mean <- CalculateMean(data = c(1, 2, 3, 4, 5, 6, 7,
 								8, 9, 10))
 
+```
+
+```R
 # Using Tab for indentation                       
 if (a == b) {
 	x <- 1
@@ -185,10 +190,14 @@ if (a == b) {
 tab.prior <- table(df[df$days.from.opt < 0, "team.id"])
 total <- sum(x[, 1])
 total <- sum(x[1, ])
+```
 
+```R
 # No space after '(' and before ')' and also one space right before '(' 
 if (debug)
+```
 
+```R
 # Use of additional spaces for clarity
 plot(x    = x.coord,
      y    = data.mat[, MakeColName(metric, ptiles[1], "roiOpt")],
@@ -196,7 +205,9 @@ plot(x    = x.coord,
      xlab = "dates",
      ylab = metric,
      main = (paste(metric, " for 4 samples ", sep = "")))
+```
 
+```R
 # Always put one space after ','
 x[1, ]
 ```
@@ -216,11 +227,80 @@ tab.prior<-table(df[df$days.from.opt < 0, "team.id"])  # needs spaces around <-
 total <- sum(x[,1])  # needs a space after the comma
 total <- sum(x[ ,1])  # needs a space after the comma, not before
 
+```
+
+```R
 if ( debug )  # no spaces around debug
+```
 
+```R
 x[1,]  # needs a space after the comma
-
+```
+```R
 # No space before '('
 if(debug)
 
 ```
+
+<div dir="rtl">
+
+## استفاده از کروشه(Curly Braces)
+
+1. در یک خط یک کروشه را نبندید; منظور اینکه نیاید هم } و { روی یک خط قرار داشته باشند.
+2. شما می‌توانید برای block های تک خظی از کروشه استفاده نکنید لذا در صورت انجام این کار در بقیه کد خود نیز بدین صورت عمل کنید(consistency داشته باشید).
+3. همیشه statement بعد else را درون کروشه بگذارید.
+
+#### حالت مطلوب
+
+<div dir="ltr">
+
+```R
+if (is.null(ylim)) {
+  ylim <- c(0, 0.06)
+}
+
+# Do either of these(up and down) two but not bos th in your code
+
+if (is.null(ylim)) ylim <- c(0, 0.06)
+
+```
+
+```R
+if (condition) {
+  one or more lines
+} else {
+  one or more lines
+}
+```
+
+<div dir="rtl">
+
+#### حالت نامطلوب
+
+<div dir="ltr">
+
+```R
+if (is.null(ylim)) ylim <- c(0, 0.06)
+```
+
+```R
+if (is.null(ylim)) {ylim <- c(0, 0.06)}
+```
+```R
+if (condition) {
+  one or more lines
+}
+else {
+  one or more lines
+}
+```
+
+```R
+if (condition)
+  one line
+else
+  one line
+
+
+```
+
