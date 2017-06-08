@@ -412,6 +412,7 @@ residue <-CalculateAverageResidue(data) # I's a very very long and cumbersome co
 ```
 
 <div dir="rtl">
+
 ## تابع تعریف گذاری
 
 1. در زمان تعریف یک تابع argument  هایی را که مقدار پیشفرض ندارند پیش از متغیر‌هایی که مقدار پیشفرض دارند بنویسید.
